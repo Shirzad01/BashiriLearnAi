@@ -1,7 +1,5 @@
-# Specify the platform and minimum iOS version
 platform :ios, '12.0'
 
-# CocoaPods configurations
 source 'https://cdn.cocoapods.org/'
 
 target 'Runner' do
@@ -15,9 +13,13 @@ target 'Runner' do
   pod 'Firebase/Analytics'
 end
 
-# Hook for Flutter to install iOS pods
+# Post-install configuration
 post_install do |installer|
   installer.pods_project.targets.each do |target|
-    flutter_additional_ios_build_settings(target)
+    target.build_configurations.each do |config|
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '12.0'
+      config.build_settings['ENABLE_BITCODE'] = 'NO'
+      config.build_settings['SWIFT_VERSION'] = '5.0'
+    end
   end
 end
