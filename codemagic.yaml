@@ -2,9 +2,10 @@
     ios-build:
       name: iOS Build with Firebase
       environment:
+        ruby: 3.2.2  # Update Ruby version to 3.2.2
         flutter: stable
         xcode: 15.2
-        cocoapods: 1.15.2  # Update to recommended version
+        cocoapods: 1.15.2
       triggering:
         events:
           - push
