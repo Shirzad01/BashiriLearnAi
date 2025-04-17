@@ -3,7 +3,7 @@
       name: iOS Build with Firebase
       environment:
         flutter: stable
-        xcode: 14.3  # Use Xcode 14.3
+        xcode: 12.3  # Use Xcode 14.3
         cocoapods: default
       triggering:
         events:
