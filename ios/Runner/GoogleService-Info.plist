@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1022678362938-e90id7jo5qk2k4slur0o5b1hv7nuoi94.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1022678362938-e90id7jo5qk2k4slur0o5b1hv7nuoi94</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>1022678362938-51la85u6n0ghisqna9vp6mhoh8scgcsa.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAMk39RgrSRx52OFY9Dp7glOk9FP5H9CLw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1022678362938</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.newgpt</string>
+	<key>PROJECT_ID</key>
+	<string>bashirigpt</string>
+	<key>STORAGE_BUCKET</key>
+	<string>bashirigpt.firebasestorage.app</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1022678362938:ios:0cf1a30498ade665b47e03</string>
+</dict>
+</plist>

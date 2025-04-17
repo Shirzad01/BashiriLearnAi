@@ -1,0 +1,28 @@
+
+  workflows:
+    ios-build:
+      name: iOS Build with Firebase
+      environment:
+        flutter: stable
+        xcode: latest
+        cocoapods: default
+      triggering:
+        events:
+          - push
+          - pull_request
+      scripts:
+        - name: Get Flutter dependencies
+          script: flutter pub get
+        - name: Install CocoaPods
+          script: cd ios && pod install
+        - name: Build iOS
+          script: flutter build ios --release --no-codesign
+      artifacts:
+        - build/ios/iphoneos/*.ipa
+      publishing:
+        email:
+          recipients:
+            - <jantabish371@gmail.com>
+          notify:
+            success: true
+            failure: true
