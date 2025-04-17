@@ -11,6 +11,8 @@ target 'Runner' do
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
   pod 'Firebase/Analytics'
+  # Explicitly include cloud_firestore
+  pod 'cloud_firestore', :path => '.symlinks/plugins/cloud_firestore/ios'
 end
 
 # Post-install configuration
