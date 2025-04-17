@@ -1,0 +1,5 @@
+  # Flutter configuration file
+  # Disable problematic settings
+  GENERATE_INFOPLIST_FILE=NO
+  ENABLE_BITCODE=NO
+  IPHONEOS_DEPLOYMENT_TARGET=12.0
