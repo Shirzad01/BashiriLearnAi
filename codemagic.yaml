@@ -1,4 +1,3 @@
-
   workflows:
     ios-build:
       name: iOS Build with Firebase
@@ -22,7 +21,7 @@
       publishing:
         email:
           recipients:
-            - <jantabish371@gmail.com>
+            - jantabish371@gmail.com
           notify:
             success: true
             failure: true
