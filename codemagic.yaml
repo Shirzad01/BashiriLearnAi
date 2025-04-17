@@ -2,7 +2,7 @@
     ios-build:
       name: iOS Build with Firebase
       environment:
-        ruby: 3.2.2  # Update Ruby version to 3.2.2
+        ruby: 3.2.2
         flutter: stable
         xcode: 15.2
         cocoapods: 1.15.2
@@ -14,7 +14,9 @@
         - name: Get Flutter dependencies
           script: flutter pub get
         - name: Install CocoaPods
-          script: cd ios && pod install
+          script: |
+            gem install cocoapods -v 1.15.2
+            cd ios && pod install
         - name: Build iOS
           script: flutter build ios --release --no-codesign --no-tree-shake-icons
       artifacts:
