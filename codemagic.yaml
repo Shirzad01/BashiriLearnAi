@@ -2,10 +2,10 @@
     ios-build:
       name: iOS Build with Firebase
       environment:
-        ruby: 3.2.2
+        ruby: 3.3.0
         flutter: stable
         xcode: 15.2
-        cocoapods: 1.15.2
+        cocoapods: 1.16.2
       triggering:
         events:
           - push
@@ -15,7 +15,7 @@
           script: flutter pub get
         - name: Install CocoaPods
           script: |
-            gem install cocoapods -v 1.15.2
+            gem install cocoapods -v 1.16.2
             cd ios && pod repo update && pod install
         - name: Build iOS
           script: flutter build ios --release --no-codesign --no-tree-shake-icons
