@@ -1,8 +1,9 @@
+
   workflows:
     ios-build:
       name: iOS Build with Firebase
       environment:
-        ruby: 3.3.0
+        ruby: 3.2.2
         flutter: stable
         xcode: 15.2
         cocoapods: 1.16.2
