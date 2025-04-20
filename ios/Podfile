@@ -6,11 +6,11 @@ target 'Runner' do
   use_frameworks!
   use_modular_headers!
 
-  # Firebase Pods (using specific versions to ensure compatibility)
-  pod 'Firebase/Core', '10.26.0'
-  pod 'Firebase/Auth', '10.26.0'
-  pod 'Firebase/Firestore', '10.26.0'
-  pod 'Firebase/Analytics', '10.26.0'
+  # Firebase Pods (remove version to use the latest compatible version)
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
+  pod 'Firebase/Analytics'
 end
 
 # Post-install configuration
