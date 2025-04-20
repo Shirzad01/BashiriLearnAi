@@ -5,8 +5,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:mailer/mailer.dart';
 import 'package:mailer/smtp_server/gmail.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
-
 import '../main.dart';
 import 'otpScreen.dart';
 
@@ -27,7 +25,7 @@ class AuthCheck extends StatelessWidget {
         }
         if (snapshot.hasData) {
           String userId = FirebaseAuth.instance.currentUser!.uid;
-          return ChatScreen(studentId: userId); // ارسال userId به ChatScreen
+          return ChatScreen(studentId: userId);
         }
         return LoginScreen();
       },
@@ -473,14 +471,14 @@ Bashiri LearnAI Team
                                 icon: Icons.person_3_outlined,
                                 validator: (value) {
                                   if (value == null || value.isEmpty) {
-                                    return "لطفاً ایمیل خود را وارد کنید";
+                                    return "Please enter your email";
                                   }
                                   if (!value.endsWith("@gmail.com")) {
-                                    return "لطفاً ایمیل معتبر وارد کنید";
+                                    return "Please enter correct email";
                                   }
                                   if (!RegExp(r'^[^@]+@[^@]+\.[^@]+')
                                       .hasMatch(value)) {
-                                    return "ایمیل نامعتبر است";
+                                    return "Email is not correct";
                                   }
                                   return null;
                                 },
@@ -498,10 +496,10 @@ Bashiri LearnAI Team
                                 isPassword: true,
                                 validator: (value) {
                                   if (value == null || value.isEmpty) {
-                                    return "لطفاً رمز عبور را وارد کنید";
+                                    return "Please enter your Password";
                                   }
                                   if (value.length < 6) {
-                                    return "رمز عبور باید حداقل 6 کاراکتر باشد";
+                                    return "password should be 6 characters";
                                   }
                                   return null;
                                 },

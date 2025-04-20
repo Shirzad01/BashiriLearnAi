@@ -399,7 +399,7 @@ class _ChatScreenState extends State<ChatScreen> with TickerProviderStateMixin {
   void _addInitialMessages() {
     final initialMessage = {
       'text':
-          'Hello $_userName! I’m Bashiri LearnAI, your language learning assistant from Bashiri Language Academy. 😊 I can help you learn English or Persian, or we can just chat! Tell me something about yourself—what do you like to do?',
+          'Hello $_userName! I’m Bashiri LearnAI, your language learning assistant from Bashiri Language Academy. 😊 I can help you learn English, or we can just chat! Tell me something about yourself—what do you like to do?',
       'isMe': false,
       'time': DateTime.now(),
       'id': UniqueKey().toString(),
