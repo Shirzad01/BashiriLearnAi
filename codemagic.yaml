@@ -11,23 +11,23 @@ workflows:
         - push
         - pull_request
     scripts:
-      - name: Get Flutter dependencies
-        script: flutter pub get
-
+      - name: Clean build
+        script: |
+          flutter clean
+          flutter pub get
       - name: Install CocoaPods
         script: |
           cd ios
+          rm -rf Pods Podfile.lock
+          pod deintegrate
           pod install
-
       - name: Clean Xcode cache
-        script: rm -rf ~/Library/Developer/Xcode/DerivedData
-
+        script: |
+          rm -rf ~/Library/Developer/Xcode/DerivedData
       - name: Build iOS
         script: flutter build ios --release --no-codesign --no-tree-shake-icons
-
     artifacts:
       - build/ios/iphoneos/*.ipa
-
     publishing:
       email:
         recipients:
