@@ -6,7 +6,7 @@ target 'Runner' do
   use_frameworks!
   use_modular_headers!
 
-  # Firebase Pods (using latest compatible versions)
+  # Firebase Pods
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
@@ -21,7 +21,8 @@ post_install do |installer|
       config.build_settings['ENABLE_BITCODE'] = 'NO'
       config.build_settings['SWIFT_VERSION'] = '5.0'
       config.build_settings['GENERATE_INFOPLIST_FILE'] = 'NO'
-      # Remove unsupported options
+      # Explicitly disable unsupported options
+      config.build_settings['GENERATE_TEXT_BASED_STUBS'] = 'NO'
       config.build_settings.delete 'GENERATE_TEXT_BASED_STUBS'
     end
   end
